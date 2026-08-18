@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Restaurant online food menu and ordering"
+    >
+
+    <title>My Restaurant Menu</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+<header class="restaurant-header">
+
+    <div class="restaurant-logo">
+        🍽️
+    </div>
+
+    <div>
+
+        <h1>My Restaurant</h1>
+
+        <p>
+            Fresh Food • Fast Service
+        </p>
+
+    </div>
+
+</header>
+
+
+<section class="table-banner">
+
+    <span>Table</span>
+
+    <strong id="table-number">
+        Takeaway
+    </strong>
+
+</section>
+
+
+<main>
+
+    <section class="welcome">
+
+        <h2>
+            What would you like to eat?
+        </h2>
+
+        <p>
+            Choose your favorite food
+            and add it to your cart.
+        </p>
+
+    </section>
+
+
+    <section
+        id="categories"
+        class="category-container"
+    >
+    </section>
+
+
+    <section
+        id="menu-container"
+        class="menu-container"
+    >
+    </section>
+
+</main>
+
+
+<div
+    id="cart-bar"
+    class="cart-bar"
+>
+
+    <div>
+
+        <span id="cart-count">
+            0 items
+        </span>
+
+        <strong>
+            ₹<span id="cart-total">
+                0.00
+            </span>
+        </strong>
+
+    </div>
+
+    <button
+        onclick="openCart()"
+    >
+        View Cart
+    </button>
+
+</div>
+
+
+<div
+    id="cart-modal"
+    class="modal hidden"
+>
+
+    <div class="modal-content">
+
+        <button
+            class="close-button"
+            onclick="closeCart()"
+        >
+            ×
+        </button>
+
+        <h2>Your Order</h2>
+
+        <div
+            id="cart-items"
+        >
+        </div>
+
+
+        <div class="modal-total">
+
+            Total:
+
+            <strong>
+                ₹<span id="modal-total">
+                    0.00
+                </span>
+            </strong>
+
+        </div>
+
+
+        <button
+            class="primary-button"
+            onclick="showCustomerForm()"
+        >
+            Continue
+        </button>
+
+    </div>
+
+</div>
+
+
+<div
+    id="customer-modal"
+    class="modal hidden"
+>
+
+    <div class="modal-content">
+
+        <button
+            class="close-button"
+            onclick="closeCustomerForm()"
+        >
+            ×
+        </button>
+
+        <h2>Customer Details</h2>
+
+
+        <label>
+            Name
+        </label>
+
+        <input
+            id="customer-name"
+            type="text"
+            placeholder="Enter your name"
+        >
+
+
+        <label>
+            Phone
+        </label>
+
+        <input
+            id="customer-phone"
+            type="tel"
+            placeholder="Enter phone number"
+        >
+
+
+        <label>
+            Table
+        </label>
+
+        <input
+            id="customer-table"
+            type="text"
+            readonly
+        >
+
+
+        <button
+            class="primary-button"
+            onclick="placeOrder()"
+        >
+            Place Order
+        </button>
+
+    </div>
+
+</div>
+
+
+<div
+    id="success-modal"
+    class="modal hidden"
+>
+
+    <div class="modal-content success-content">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>
+            Order Ready
+        </h2>
+
+        <p>
+            Your order has been prepared.
+        </p>
+
+        <p>
+            Order Number:
+            <strong id="order-number">
+                -
+            </strong>
+        </p>
+
+        <p>
+            Total:
+            <strong>
+                ₹<span id="success-total">
+                    0.00
+                </span>
+            </strong>
+        </p>
+
+        <button
+            class="primary-button"
+            onclick="closeSuccess()"
+        >
+            Done
+        </button>
+
+    </div>
+
+</div>
+
+
+<script
+    src="js/app.js"
+></script>
+
+</body>
+
+</html>
