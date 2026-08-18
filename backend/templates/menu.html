@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Restaurant Menu</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/menu.css') }}"
+    >
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <h1>🍽️ My Restaurant</h1>
+
+    <p>Fresh food • Fast service • Easy ordering</p>
+
+</header>
+
+
+<main class="container">
+
+    <section>
+
+        <h2>Our Menu</h2>
+
+        <div
+            id="categories"
+            class="categories"
+        ></div>
+
+        <div
+            id="menu"
+            class="menu-grid"
+        ></div>
+
+    </section>
+
+
+    <section class="cart-section">
+
+        <h2>🛒 Your Cart</h2>
+
+        <div id="cart"></div>
+
+        <div class="cart-total">
+
+            Total:
+            ₹<span id="total">0.00</span>
+
+        </div>
+
+        <button
+            id="checkout-button"
+            class="checkout-button"
+        >
+            Place Order
+        </button>
+
+    </section>
+
+
+    <section
+        id="customer-section"
+        class="customer-section"
+        style="display: none;"
+    >
+
+        <h2>Customer Details</h2>
+
+        <input
+            type="text"
+            id="customer-name"
+            placeholder="Your name"
+        >
+
+        <input
+            type="tel"
+            id="customer-phone"
+            placeholder="Phone number"
+        >
+
+        <input
+            type="text"
+            id="table-number"
+            placeholder="Table number"
+        >
+
+        <button
+            id="confirm-button"
+            class="checkout-button"
+        >
+            Confirm Order
+        </button>
+
+    </section>
+
+
+    <section
+        id="order-result"
+        class="order-result"
+    ></section>
+
+</main>
+
+
+<script
+    src="{{ url_for('static', filename='js/menu.js') }}"
+></script>
+
+</body>
+
+</html>
